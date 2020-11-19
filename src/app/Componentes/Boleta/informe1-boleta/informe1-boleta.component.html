@@ -1,0 +1,51 @@
+<div class="contenedordd">
+  <form [formGroup]="Informe1AEvento">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-default">Desde...</span>
+      </div>
+      <input type="text" class="form-control" aria-label="Sizing example input"
+        aria-describedby="inputGroup-sizing-default" formControlName="fechaf">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Hasta...</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="fechai">
+      </div>
+      <button type="submit" class="botona" (click)="prueba()">BUSCAR</button>
+  </form>
+</div>
+
+
+<div class="contenedord">
+  <div>
+
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre del evento</th>
+        <th scope="col">Nombre del cliente</th>
+        <th scope="col">Número de documento</th>
+        <th scope="col">Punto de venta</th>
+        <th scope="col">Fecha de compra</th>
+        <th scope="col">Asiento</th>
+        <th scope="col">Precio boleta</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let bole of informes1'>
+        <td>{{bole.nombre_evento}}</td>
+        <td>{{bole.nombre_completo}}</td>
+        <td>{{bole.numero_documento_persona}}</td>
+        <td>{{bole.nombre_punto_de_venta}}</td>
+        <td>{{bole.fecha_compra}}</td>
+        <td>{{bole.numero_asiento_bolesta}}</td>
+        <td>{{bole.precio_boleta}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

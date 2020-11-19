@@ -1,0 +1,114 @@
+.even {
+    color: black;
+    text-align: justify;
+    display: none;
+    opacity: 0;
+    transition: opacity 1.5s;
+  }
+  
+  .title {
+    font-weight: bold;
+    text-align: center;
+    color: black;
+  }
+  
+  .tabla {
+    width: 300px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: #E9ECEF;
+    border-radius: 30px;
+    transition: background .4s, color 1s;
+  }
+  
+  .tabla:hover {
+    background-color: #D5CA3D;
+  }
+  
+  .contenedord {
+    position: relative;
+    top: 70px;
+    left: 50%;
+    width: 640px;
+    height: auto;
+    margin-left: -320px;
+    margin-top: -60px;
+  }
+  
+  .botona {
+    outline: none;
+  }
+  
+  .botona {
+    margin-left: 16%;
+    margin-top: 10px;
+    width: 200px;
+    border: 2px solid rgb(57, 87, 6);
+    border-radius: 30px;
+    color: rgb(57, 87, 6);
+    font-weight: bold;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    transition: background .5s, color 1s;
+  }
+  
+  .botona:hover {
+    background-color: #77A22F;
+    border: 2px solid #77A22F;
+    color: #ffffff;
+    box-shadow: none;
+    outline: none;
+  }
+  
+  td, tr {
+    padding: 10px;
+  }
+  
+
+  
+  .tabla:hover .even {
+    display: block;
+    opacity: 1;
+  }
+  
+  .imgg {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    span {
+      /* Clip Background Image */
+  
+      background: url(../../../../assets/imagenes/animated_text_fill.png)
+        repeat-y;
+      -webkit-background-clip: text;
+      background-clip: text;
+  
+      /* Animate Background Image */
+  
+      -webkit-text-fill-color: transparent;
+      -webkit-animation: aitf 80s linear infinite;
+  
+      /* Activate hardware acceleration for smoother animations */
+  
+      -webkit-transform: translate3d(0, 0, 0);
+      -webkit-backface-visibility: hidden;
+    }
+  }
+  
+  /* Animate Background Image */
+  
+  @-webkit-keyframes aitf {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  

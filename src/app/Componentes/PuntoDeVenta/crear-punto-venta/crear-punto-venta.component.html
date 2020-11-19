@@ -1,0 +1,35 @@
+<div class="contenedorform">
+  <form [formGroup]="CrearAPuntoVenta">
+    <div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Nombre del punto de venta</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoNomP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevaDirP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoMunP">
+          <option selected>Escoge...</option>
+          <option *ngFor='let municipios of municipios'>{{municipios.id_municipio}} {{municipios.nombre_municipio}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div input-group mb-3>
+        <button type="submit" class="botona" (click)="CrearPuntoVenta()" routerLink="/listarpuntoventa"
+          routerLinkActive="active">CREAR PUNTO DE
+          VENTA</button>
+      </div>
+  </form>
+</div>

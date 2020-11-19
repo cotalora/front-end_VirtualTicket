@@ -1,0 +1,22 @@
+<div class="contenedord">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Dirección</th>
+        <th scope="col">Ubicación</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let puntosventa of puntos_de_ventas'>
+        <td>{{puntosventa.nombre_punto_de_venta}}</td>
+        <td>{{puntosventa.direccion_punto_de_venta}}</td>
+        <td>{{puntosventa.nombre_municipio}}</td>
+        <td><button type="button" class="botona" routerLink="/mostarpuntoventa/{{puntosventa.id_punto_de_venta}}" routerLinkActive="active">VER DETALLES</button></td>
+        <td><button type="button" class="botona" routerLink="/informe2/{{puntosventa.id_punto_de_venta}}" routerLinkActive="active">VER INFORME DE BOLETAS</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

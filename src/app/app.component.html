@@ -1,0 +1,104 @@
+<div class="hero">
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+  <div class="cube"></div>
+
+</div>
+<nav class="navbarmod navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#" routerLink="/" routerLinkActive="active">
+      <img src="./assets/imagenes/Logo3.png" width="80">
+  </a>
+  <button class="expand2 navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+          <i class="bars fas fa-bars"></i>
+      </span>
+  </button>
+  <div class="collapse navbar-collapse min" id="navbarSupportedContent">
+      <ul class="menubar navbar-nav mr-auto">
+          <li class="nav-item">
+              <a class="animatedbutton nav-link" href="#" routerLink="/crearpersona"
+              routerLinkActive="active">AÑADIR CLIENTE</a>
+          </li>
+      </ul>
+      <form class="search-box form-inline my-2 my-lg-0">
+          <input class="search-txt" type="text" name="" placeholder="Buscar...">
+          <a class="quit search-btn" href="#">
+              <i class="fas fa-search"></i>
+          </a>
+      </form>
+  </div>
+</nav>
+
+<nav class="tipos navbar navbar-expand-lg navbar-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="contenedor_de_tipo_eventos">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="menu navbar-nav mr-auto">
+              <li class="nav-item">
+                  <a class="cool" href="#">CONCIERTOS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="cool" href="#">TEATRO</a>
+              </li>
+              <li class="nav-item">
+                  <a class="cool" href="#">DEPORTES</a>
+              </li>
+              <li class="nav-item">
+                  <a class="cool" href="#">FOROS</a>
+              </li>
+              <li class="nav-item">
+                  <a class="cool" href="#">FAMILIA</a>
+              </li>
+              <li class="nav-item">
+                  <a class="cool" href="#">FESTIVALES</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+<div class="barra_nav">
+  <div class="header">
+      <ul class="nave">
+          <li>
+              <a class="dos" href="#" routerLink="/listarpuntoventa"
+              routerLinkActive="active">PUNTO DE VENTA</a>
+              <ul>
+                  <li class="uno">
+                      <a href="#" routerLink="/crearpuntoventa"
+                      routerLinkActive="active">CREAR PUNTO DE VENTA</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <a class="dos" href="#" routerLink="/crearevento"
+              routerLinkActive="active">CREAR EVENTO</a>
+          </li>
+          <li>
+              <a class="dos" href="#" routerLink="/listarclientes"
+              routerLinkActive="active">CLIENTES</a>
+          </li>
+          <li>
+              <a class="dos" href="#" routerLink="/listarboletas"
+              routerLinkActive="active">BOLETAS</a>
+              <ul>
+                  <li class="uno">
+                      <a href="#" routerLink="/crearboleta"
+                      routerLinkActive="active">CREAR BOLETAS</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+</div>
+<div class="acercade">
+  ACERCA DE
+</div>
+<router-outlet></router-outlet>

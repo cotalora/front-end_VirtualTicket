@@ -1,0 +1,34 @@
+.contenedorform{
+    margin-top: 20px;
+    margin-left: 350px;
+    width: 700px;
+}
+.botona {
+    outline: none;
+  }
+  
+  .botona {
+    float: left;
+    margin-left: 35%;
+    margin-bottom: 10px;
+    width: 200px;
+    border: 2px solid rgb(57, 87, 6);
+    border-radius: 30px;
+    color: rgb(57, 87, 6);
+    font-weight: bold;
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+    transition: background .5s, color 1s;
+  }
+  
+  .botona:hover {
+    background-color: #77A22F;
+    border: 2px solid #77A22F;
+    color: #ffffff;
+    box-shadow: none;
+    outline: none;
+  }
+  .area {
+      height: 150px;
+  }

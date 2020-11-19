@@ -1,0 +1,52 @@
+<div class="contenedorform">
+    <form [formGroup]="CrearABoleta">
+      <div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Precio de boleta</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" formControlName="precio">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroup-sizing-default">Número de asiento</span>
+          </div>
+          <input type="text" class="form-control" aria-label="Sizing example input"
+            aria-describedby="inputGroup-sizing-default" formControlName="asiento">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Evento</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" formControlName="evento">
+            <option selected>Escoge...</option>
+            <option *ngFor='let even of eventos'>{{even.id_evento}} {{even.nombre_evento}}</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Cliente</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" formControlName="cliente">
+            <option selected>Escoge...</option>
+            <option *ngFor='let per of personas'>{{per.id_persona}} {{per.primer_apellido_persona}}
+              {{per.segundo_apellido_persona}} {{per.primer_nombre_persona}} {{per.segundo_nombre_persona}}</option>
+          </select>
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Punto de venta</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01" formControlName="punven">
+            <option selected>Escoge...</option>
+            <option *ngFor='let pun of puntos_de_venta'>{{pun.id_punto_de_venta}} {{pun.nombre_punto_de_venta}}</option>
+          </select>
+        </div>
+      </div>
+      <div input-group mb-3>
+        <button type="submit" class="botona" (click)="CrearBoleta()" routerLink="/listarboletas"
+          routerLinkActive="active">CREAR BOLETA</button>
+      </div>
+    </form>
+  </div>

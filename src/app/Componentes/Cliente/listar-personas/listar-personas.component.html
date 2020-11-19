@@ -1,0 +1,25 @@
+<div class="contenedord">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Primer apellido</th>
+        <th scope="col">Segundo apellido</th>
+        <th scope="col">Primer nombre</th>
+        <th scope="col">Segundo nombre</th>
+        <th scope="col">Número de documento</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor='let person of personas'>
+        <td>{{person.primer_apellido_persona}}</td>
+        <td>{{person.segundo_apellido_persona}}</td>
+        <td>{{person.primer_nombre_persona}}</td>
+        <td>{{person.segundo_nombre_persona}}</td>
+        <td>{{person.numero_documento_persona}}</td>
+        <td><button type="button" class="botona" routerLink="/mostrarpersona/{{person.id_persona}}" routerLinkActive="active">VER DETALLES</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="contenedord">
+  <div class="tabla" *ngFor='let eventos of eventos'>
+    <div class="title">
+      <p><span>{{eventos.nombre_evento}}</span></p>
+    </div>
+    <div class="imagen"><img class="imgg" src="{{eventos.imagenes}}"></div>
+    <div class="even">{{eventos.descripcion_evento}}</div>
+    <div><button type="button" class="botona" routerLink="/detalles/{{eventos.id_evento}}" routerLinkActive="active">VER
+        DETALLES</button></div>
+    <div><button type="button" class="botona" routerLink="/informe1/{{eventos.id_evento}}" routerLinkActive="active">VER
+        INFORME DE BOLETAS</button></div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="contenedord">
+  <div class="tabla" *ngFor='let puntosventa of puntos_de_ventas'>
+    <div class="title">
+      <p><span>{{puntosventa.nombre_punto_de_venta}}</span></p>
+    </div>
+    <div class="even"><strong>Dirección: </strong>{{puntosventa.direccion_punto_de_venta}}</div>
+    <div class="even"><strong>Ubicación: </strong>{{puntosventa.nombre_municipio}}</div>
+
+    <div><button type="button" class="botona" routerLink="/modificarpuntoeven/{{puntosventa.id_punto_de_venta}}" routerLinkActive="active">EDITAR</button></div>
+  </div>
+
+
+</div>

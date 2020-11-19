@@ -1,0 +1,13 @@
+<div class="contenedord">
+  <div class="tabla" *ngFor='let bole of boletas'>
+    <div class="even"><strong>Nombre del evento: </strong>{{bole.nombre_evento}}</div>
+    <div class="even"><strong>Nombre del cliente: </strong>{{bole.nombre_completo}}</div>
+    <div class="even"><strong>Número de documento: </strong>{{bole.numero_documento_persona }}</div>
+    <div class="even"><strong>Punto de venta: </strong>{{bole.nombre_punto_de_venta}}</div>
+    <div class="even"><strong>Precio del boleto: </strong>{{bole.precio_boleta}}</div>
+    <div class="even"><strong>Número de asiento: </strong>{{bole.numero_asiento_bolesta}}</div>
+    <div class="centro">
+      <div><button type="button" class="botona" routerLink="/modificarboleta/{{bole.id_boleta}}" routerLinkActive="active">EDITAR</button></div>
+    </div>
+  </div>
+</div>

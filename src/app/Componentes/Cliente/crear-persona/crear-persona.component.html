@@ -1,0 +1,117 @@
+<div class="contenedorform">
+  <form [formGroup]="CrearAPersonas">
+    <div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Primer Apellido</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoApeP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Segundo Apellido</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoApe2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Primer Nombre</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoNomP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Segundo Nombre</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoNom2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Correo Electrónico</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevaDirP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Contraseña</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevaConP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo de documento</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoTidP">
+          <option selected>Escoger...</option>
+          <option *ngFor='let tipd of tipodocumentos'>{{tipd.id_tipo_documento}} {{tipd.nombre_tipo_documento}}</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de documento</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoNumP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevaDir2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoMunP">
+          <option selected>Escoger...</option>
+          <option *ngFor='let municipios of municipios'>{{municipios.id_municipio}} {{municipios.nombre_municipio}}
+          </option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Fecha de nacimiento</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevaFecP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de celular</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoCelP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de teléfono</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" formControlName="nuevoTelP">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo de persona</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoTipP">
+          <option selected>Escoger...</option>
+          <option *ngFor='let tiper of tipopersonas'>{{tiper.id_tipo_persona}} {{tiper.nombre_tipo_persona}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div input-group mb-3>
+      <button type="submit" class="botona" (click)="CrearPer()" routerLink="/listarclientes"
+      routerLinkActive="active">AÑADIR PERSONA</button>
+    </div>
+  </form>
+</div>

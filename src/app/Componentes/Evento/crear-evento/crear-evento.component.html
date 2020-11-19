@@ -1,0 +1,79 @@
+<div class="contenedorform">
+  <form [formGroup]="CrearAEvento">
+      <div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Nombre del evento</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevoNomE">
+          </div>
+      
+          <div class="area input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Descripción</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea" formControlName="nuevaDesE"></textarea>
+          </div>
+      
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevaDirE">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Aforo</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevoAfoE">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Fecha inicio</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevoFhI">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Fecha fin</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevoFhF">
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroup-sizing-default">Url imagen</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input"
+              aria-describedby="inputGroup-sizing-default" formControlName="nuevoImg">
+          </div>
+      
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoComb">
+              <option selected>Escoge...</option>
+              <option *ngFor='let municipios of municipios'>{{municipios.id_municipio}} {{municipios.nombre_municipio}}</option>
+            </select>
+          </div>
+      
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <label class="input-group-text" for="inputGroupSelect01">Tipo de evento</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoTipE">
+              <option selected>Escoge...</option>
+              <option *ngFor='let tipoeventos of tipoeventos'>{{tipoeventos.id_tipo_evento}} {{tipoeventos.nombre_tipo_evento}}</option>
+            </select>
+          </div>
+        </div>
+        <div input-group mb-3>
+          <button type="submit" class="botona" (click)="CrearEven()" routerLink="/" routerLinkActive="active">CREAR EVENTO</button>
+        </div>
+  </form>
+</div>

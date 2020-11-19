@@ -1,0 +1,126 @@
+<div class="contenedorform">
+  <form [formGroup]="ActualizarAPersonas">
+    <div *ngFor='let pers of personas'>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Primer Apellido</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.primer_apellido_persona"
+          formControlName="nuevoApeP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Segundo Apellido</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.segundo_apellido_persona"
+          formControlName="nuevoApe2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Primer Nombre</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.primer_nombre_persona" formControlName="nuevoNomP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Segundo Nombre</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.segundo_nombre_persona"
+          formControlName="nuevoNom2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Correo Electrónico</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.direccion_correro_persona"
+          formControlName="nuevaDirP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Contraseña</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.contrasena_persona" formControlName="nuevaConP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo de documento</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoTidP">
+          <option selected># {{pers.nombre_tipo_documento}}</option>
+          <option *ngFor='let tipd of tipodocumentos'>{{tipd.id_tipo_documento}} {{tipd.nombre_tipo_documento}}</option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de documento</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.numero_documento_persona"
+          formControlName="nuevoNumP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Dirección</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.direccion_residencia_persona"
+          formControlName="nuevaDir2P">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Municipio</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoMunP">
+          <option selected># {{pers.nombre_municipio}}</option>
+          <option *ngFor='let municipios of municipios'>{{municipios.id_municipio}} {{municipios.nombre_municipio}}
+          </option>
+        </select>
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Fecha de nacimiento</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.fecha_nacimiento_persona"
+          formControlName="nuevaFecP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de celular</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.numero_celular_persona"
+          formControlName="nuevoCelP">
+      </div>
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroup-sizing-default">Número de teléfono</span>
+        </div>
+        <input type="text" class="form-control" aria-label="Sizing example input"
+          aria-describedby="inputGroup-sizing-default" [value]="pers.numero_telefono_persona"
+          formControlName="nuevoTelP">
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01">Tipo de persona</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01" formControlName="nuevoTipP">
+          <option selected># {{pers.nombre_tipo_persona}}</option>
+          <option *ngFor='let tiper of tipopersonas'>{{tiper.id_tipo_persona}} {{tiper.nombre_tipo_persona}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div input-group mb-3>
+      <button type="submit" class="botona" (click)="ActualizarPersona()" routerLink="/listarclientes"
+        routerLinkActive="active">ACTUALIZAR PERSONA</button>
+    </div>
+  </form>
+</div>

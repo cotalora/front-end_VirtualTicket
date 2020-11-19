@@ -1,0 +1,20 @@
+<div class="contenedord">
+  <div class="tabla" *ngFor='let eventos of eventos'>
+    <div class="title">
+      <p><span>{{eventos.nombre_evento}}</span></p>
+    </div>
+    <div class="imagen"><img class="imgg" src="{{eventos.imagenes}}"></div>
+    <div class="even">{{eventos.descripcion_evento}}</div>
+    <div class="even"><strong>Dirección: </strong>{{eventos.direccion_evento}}</div>
+    <div class="even"><strong>Aforo: </strong>{{eventos.aforo_evento }}</div>
+    <div class="even"><strong>Fecha y hora de inicio del evento: </strong>{{eventos.fecha_hora_inicio_evento  }}</div>
+    <div class="even"><strong>Fecha y hora de finalización del evento: </strong>{{eventos.fecha_hora_fin_evento   }}
+    </div>
+    <div class="even"><strong>Ubicación: </strong>{{eventos.nombre_municipio  }}</div>
+    <div class="even"><strong>Tipo: </strong>{{eventos.nombre_tipo_evento}}</div>
+    <div class="centro">
+      <div><button type="button" class="botona" routerLink="/modificarevento/{{eventos.id_evento}}" routerLinkActive="active">EDITAR</button></div>
+      <div><button type="button" class="botona" routerLink="" routerLinkActive="active">COMPRAR BOLETAS</button></div>
+    </div>
+  </div>
+</div>

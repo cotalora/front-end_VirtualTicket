@@ -1,0 +1,20 @@
+<div class="contenedord">
+  <div class="tabla" *ngFor='let pers of personas'>
+    <div class="title">
+      <p><span>{{pers.primer_apellido_persona}} {{pers.segundo_apellido_persona}} {{pers.primer_nombre_persona}}
+          {{pers.segundo_nombre_persona}}</span></p>
+    </div>
+    <div class="even"><strong>Correo: </strong>{{pers.direccion_correro_persona}}</div>
+    <div class="even"><strong>Tipo de documento: </strong>{{pers.nombre_tipo_documento}}</div>
+    <div class="even"><strong>Número de identificación: </strong>{{pers.numero_documento_persona }}</div>
+    <div class="even"><strong>Dirección: </strong>{{pers.direccion_residencia_persona}}</div>
+    <div class="even"><strong>Muncípio: </strong>{{pers.nombre_municipio}}</div>
+    <div class="even"><strong>Fecha de nacimiento: </strong>{{pers.fecha_nacimiento_persona}}</div>
+    <div class="even"><strong>Número de celular: </strong>{{pers.numero_celular_persona  }}</div>
+    <div class="even"><strong>Número de teléfono: </strong>{{pers.numero_telefono_persona}}</div>
+    <div class="even"><strong>Tipo de persona: </strong>{{pers.nombre_tipo_persona}}</div>
+    <div class="centro">
+      <div><button type="button" class="botona" routerLink="/modificarpersona/{{pers.id_persona}}" routerLinkActive="active">EDITAR</button></div>
+    </div>
+  </div>
+</div>
